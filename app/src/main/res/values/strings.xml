@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Proy_Agenda</string>
+    <string name="nombre_contacto">Nombre:</string>
+    <string name="apellidos_contacto">Apellidos:</string>
+    <string name="numero_contacto">Telefono:</string>
+    <string name="sexo_contacto">Sexo:</string>
+</resources>
