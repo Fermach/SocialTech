@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Proy_Agenda</string>
+    <string name="nombre_contacto">Nombre:</string>
+    <string name="apellidos_contacto">Apellidos:</string>
+    <string name="numero_contacto">Telefono:</string>
+    <string name="email_contacto">Email:</string>
+    <string name="formacion_contacto">Formacion:</string>
+    <string name="numero_contactos">Contactos agregados:</string>
+
+</resources>
