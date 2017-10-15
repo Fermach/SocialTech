@@ -4,7 +4,11 @@ android {
     compileSdkVersion 26
     buildToolsVersion "26.0.2"
     defaultConfig {
+<<<<<<< HEAD
         applicationId "com.example.fermach.socialtech"
+=======
+        applicationId "es.vcarmen.socialtech"
+>>>>>>> d4fdc9d6c2d190c8ef3296209f5ba6b00d3e2e88
         minSdkVersion 22
         targetSdkVersion 26
         versionCode 1

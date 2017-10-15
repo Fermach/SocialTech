@@ -6,7 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorBlue2"
+<<<<<<< HEAD
     tools:context="com.example.fermach.socialtech.MainActivity">
+=======
+    tools:context="es.vcarmen.socialtech.MainActivity">
+>>>>>>> d4fdc9d6c2d190c8ef3296209f5ba6b00d3e2e88
 
     <TextView
         android:id="@+id/textView_nombre"
@@ -21,8 +25,12 @@
         android:id="@+id/editText_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:hint="Introduzca un nombre"
         android:inputType="text"
+=======
+        android:text="Introduzca un nombre"
+>>>>>>> d4fdc9d6c2d190c8ef3296209f5ba6b00d3e2e88
         android:textSize="25sp" />
 
     <TextView
@@ -38,8 +46,12 @@
         android:id="@+id/editText_apellido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:hint="Introduzca el apellido"
         android:inputType="text"
+=======
+        android:text="Introduzca el apellido"
+>>>>>>> d4fdc9d6c2d190c8ef3296209f5ba6b00d3e2e88
         android:textSize="25sp" />
     <TextView
         android:id="@+id/textView_numero"
@@ -54,6 +66,7 @@
         android:id="@+id/editText_numero"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:hint="Introduzca el telefono"
         android:textSize="25sp"
         android:inputType="number"/>
@@ -95,6 +108,30 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
+=======
+        android:text="Introduzca el telefono"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView_sexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlue3"
+        android:textColor="@color/colorWhite"
+        android:text="@string/sexo_contacto"
+        android:textSize="25sp"/>
+
+    <EditText
+        android:id="@+id/editText_sexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Introduzca el sexo"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>>>>>>> d4fdc9d6c2d190c8ef3296209f5ba6b00d3e2e88
         android:id="@+id/mi_RLayout"
         android:background="@color/colorBlue1"
             >
@@ -120,6 +157,7 @@
             android:textColor="@color/colorWhite"
             android:layout_width="143sp"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_column="0"
             android:layout_marginStart="28dp"
             android:layout_row="0"
@@ -138,4 +176,15 @@
         android:text="@string/numero_contactos"
         android:textSize="20sp"
         />
+=======
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_column="0"
+            android:layout_marginStart="200dp"
+            android:layout_row="0"
+            android:text="Cancelar"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+>>>>>>> d4fdc9d6c2d190c8ef3296209f5ba6b00d3e2e88
 </LinearLayout>

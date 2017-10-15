@@ -3,8 +3,12 @@
     <string name="nombre_contacto">Nombre:</string>
     <string name="apellidos_contacto">Apellidos:</string>
     <string name="numero_contacto">Telefono:</string>
+<<<<<<< HEAD
     <string name="email_contacto">Email:</string>
     <string name="formacion_contacto">Formacion:</string>
     <string name="numero_contactos">Contactos agregados:</string>
 
+=======
+    <string name="sexo_contacto">Sexo:</string>
+>>>>>>> d4fdc9d6c2d190c8ef3296209f5ba6b00d3e2e88
 </resources>
