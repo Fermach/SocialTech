@@ -1,20 +1,27 @@
 package com.example.fermach.socialtech;
 
+import java.io.Serializable;
+
 /**
  * Created by matinal on 03/10/2017.
  */
 
-public class Contacto {
+public class Contact implements Serializable{
     private String nombre;
     private String apellido;
     private String telefono;
     private String email;
+    private String formacion;
 
-        public Contacto(String nombre, String apellido, String telefono, String email) {
+
+
+    public Contact(String nombre, String apellido, String telefono, String email,String formacion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
         this.email = email;
+        this.formacion=formacion;
+
     }
 
     @Override
@@ -23,7 +30,8 @@ public class Contacto {
                 "nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", telefono=" + telefono +
-                ", sexo=" + email +
+                ", email=" + email +
+                ", formacion= "+formacion+
                 '}';
     }
 
@@ -54,4 +62,11 @@ public class Contacto {
     public String getEmail() {return email;}
 
     public void setEmail(char sexo) {this.email = email;}
-}
+
+    public String getFormacion() {
+        return formacion;
+    }
+
+    public void setFormacion(String formacion) {
+        this.formacion = formacion;
+    }}

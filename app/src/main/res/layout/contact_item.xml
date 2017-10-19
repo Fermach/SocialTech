@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorBlue3"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/personaNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/personaApellidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:id="@+id/personaTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:id="@+id/personaEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        />
+
+    <TextView
+        android:id="@+id/personaFormacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"/>
+
+
+</LinearLayout>
