@@ -6,23 +6,29 @@ import java.io.Serializable;
  * Created by matinal on 03/10/2017.
  */
 
-public class Contact implements Serializable{
+public class Contact implements Serializable {
     private String nombre;
     private String apellido;
     private String telefono;
     private String email;
     private String formacion;
+    private String provincia;
+    private int edad;
+    private String sexo;
 
-
-
-    public Contact(String nombre, String apellido, String telefono, String email,String formacion) {
+    public Contact(String nombre, String apellido, String telefono, String email, String formacion, String provincia, int edad,String sexo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
         this.email = email;
-        this.formacion=formacion;
-
+        this.formacion = formacion;
+        this.provincia = provincia;
+        this.edad = edad;
+        this.sexo= sexo;
     }
+
+
+
 
     @Override
     public String toString() {
@@ -31,8 +37,24 @@ public class Contact implements Serializable{
                 ", apellido='" + apellido + '\'' +
                 ", telefono=" + telefono +
                 ", email=" + email +
-                ", formacion= "+formacion+
+                ", formacion= " + formacion +
+                ", provincia= " + provincia +
+                ", edad= " + edad +
+                ", sexo= " + sexo +
+
                 '}';
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getProvincia() {
+        return provincia;
+    }
+
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
     }
 
     public String getNombre() {
@@ -59,9 +81,13 @@ public class Contact implements Serializable{
         this.telefono = telefono;
     }
 
-    public String getEmail() {return email;}
+    public String getEmail() {
+        return email;
+    }
 
-    public void setEmail(char sexo) {this.email = email;}
+    public void setEmail(char sexo) {
+        this.email = email;
+    }
 
     public String getFormacion() {
         return formacion;
@@ -69,4 +95,21 @@ public class Contact implements Serializable{
 
     public void setFormacion(String formacion) {
         this.formacion = formacion;
-    }}
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+}

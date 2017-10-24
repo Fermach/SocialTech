@@ -5,7 +5,11 @@
     <string name="numero_contacto">Telefono:</string>
     <string name="email_contacto">Email:</string>
     <string name="formacion_contacto">Formacion:</string>
+    <string name="poblacion_contacto">Poblacion:</string>
     <string name="numero_contactos">Contactos agregados:</string>
     <string name="sexo_contacto">Sexo:</string>
+    <string name="sexo_masculino">Hombre</string>
+    <string name="sexo_femenino">Mujer</string>
+    <string name="edad_contacto">Edad:</string>
 
 </resources>

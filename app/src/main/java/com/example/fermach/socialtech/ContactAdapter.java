@@ -38,14 +38,20 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
         TextView telefono = convertView.findViewById(R.id.personaTelefono);
         TextView email = convertView.findViewById(R.id.personaEmail);
         TextView formacion = convertView.findViewById(R.id.personaFormacion);
+        TextView provincia = convertView.findViewById(R.id.personaProvincia);
+        TextView edad = convertView.findViewById(R.id.personaEdad);
+        TextView sexo = convertView.findViewById(R.id.personaSexo);
 
-        nombre.setText(c.getNombre());
-        apellidos.setText(c.getApellido());
-        telefono.setText(c.getTelefono());
-        email.setText(c.getEmail());
-        formacion.setText(c.getFormacion());
-
+        nombre.setText("Nombre: "+c.getNombre());
+        apellidos.setText("Apellidos: "+c.getApellido());
+        telefono.setText("Telefono: "+c.getTelefono());
+        email.setText("Email: "+c.getEmail());
+        formacion.setText("Formacion: "+c.getFormacion());
+        provincia.setText("Provincia: "+c.getProvincia());
+        edad.setText("Edad: "+c.getEdad());
+        sexo.setText("Sexo: "+c.getSexo());
 
         return convertView;
     }
+
 }

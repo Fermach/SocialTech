@@ -29,11 +29,28 @@
         android:id="@+id/personaEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorWhite"
-        />
+        android:textColor="@color/colorWhite" />
 
     <TextView
         android:id="@+id/personaFormacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:id="@+id/personaProvincia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:id="@+id/personaEdad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:id="@+id/personaSexo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/colorWhite"/>
