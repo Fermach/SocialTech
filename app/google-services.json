@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "130987256248",
+    "firebase_url": "https://socialtech-d21cc.firebaseio.com",
+    "project_id": "socialtech-d21cc",
+    "storage_bucket": "socialtech-d21cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130987256248:android:9612ce0347537a81",
+        "android_client_info": {
+          "package_name": "com.example.fermach.socialtech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130987256248-7d2cq56hq3buggos943ish9n3p5pbg7r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fermach.socialtech",
+            "certificate_hash": "b72cf5beb0bdc69d5e57b430550bb6e83bdd22ee"
+          }
+        },
+        {
+          "client_id": "130987256248-qgt0cud7copl4d8cetn9ulpa4e0n8m74.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGW-RnewXBccQZnutsgU91o_o8eQkEuUo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130987256248-qgt0cud7copl4d8cetn9ulpa4e0n8m74.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

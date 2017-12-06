@@ -3,21 +3,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.fermach.socialtech.Contacts_form"
+    tools:context="com.example.fermach.socialtech.Companies_form"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical"    >
 
 
     <ListView
-        android:id="@+id/list_contacts"
+        android:id="@+id/list_companies"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorBackground"
-       />
+        android:longClickable="true"
 
-
+        />
 
 
 </LinearLayout>

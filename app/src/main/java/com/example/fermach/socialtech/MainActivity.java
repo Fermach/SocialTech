@@ -1,207 +1,131 @@
 package com.example.fermach.socialtech;
 
-import android.content.Intent;
+
 import android.os.Bundle;
-import android.support.annotation.IdRes;
+import android.os.PersistableBundle;
+import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.SeekBar;
-import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
+
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
+/**
+ * Clase principal donde se gestionan los demás fragmentos
+ *
+ * @author Fermach
+ * @version 1.0.
+ */
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener  {
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, Serializable, SeekBar.OnSeekBarChangeListener {
+    public final static String MAIN_FRAGMENT="MAIN_FRAGMENT";
+    private Fragment fragment;
 
-    private ListView listView;
-    protected static ArrayList<Contact> contactos;
-    private EditText ET_nombre;
-    private EditText ET_apellidos;
-    private EditText ET_email;
-    private EditText ET_telefono;
-    private Button btn_alta;
-    private Button btn_cancelar;
-    private Button btn_listaContactos;
-    private AdapterView spinner_formacion;
-    private AdapterView spinner_provincia;
-    private TextView num_contactos;
-    private TextView edad_elegida;
-    private ContactAdapter adaptador;
-    private Contact contacto;
-    private SeekBar seekbar_edad;
-    private RadioGroup rg;
-    public final static String CONTACTO="CONTACTO";
-    public final static String CONTACTOS="CONTACTOS";
-    int edad;
-    String sexo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_form);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        fragment= new Contacts_form();
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
 
 
-
-        contactos = new ArrayList<>();
-        listView=(ListView)findViewById(R.id.lista);
-        ET_nombre= (EditText)findViewById(R.id.editText_nombre) ;
-        ET_apellidos= (EditText)findViewById(R.id.editText_apellido) ;
-        ET_email= (EditText)findViewById(R.id.editText_email) ;
-        ET_telefono= (EditText)findViewById(R.id.editText_numero) ;
-        btn_alta=(Button)findViewById(R.id.btn_alta);
-        btn_cancelar=(Button)findViewById(R.id.btn_cancelar);
-        btn_listaContactos=(Button)findViewById(R.id.btn_listaContacts);
-        num_contactos= (TextView) findViewById(R.id.textView_num_contactos);
-        edad_elegida= (TextView) findViewById(R.id.textView_edad_elegida);
-        spinner_formacion=(Spinner)findViewById(R.id.spinner_formacion);
-        spinner_provincia=(Spinner)findViewById(R.id.spinner_provincia);
-        rg=(RadioGroup)findViewById(R.id.Rgroup);
-
-
-        seekbar_edad=(SeekBar)findViewById(R.id.seekBar);
-        seekbar_edad.setMax(150);
-        seekbar_edad.setOnSeekBarChangeListener(this);
-        edad_elegida.setText(""+seekbar_edad.getProgress()+" /"+seekbar_edad.getMax());
-
-        String[] valores_formacion= {"SMR","DAM","DAW",
-                "ASIR","Ingenieria Informática","Grado","Otros"};
-
-        String[] valores_provincia= {"Jaen","Malaga","Sevilla",
-                "Cordoba","Almeria","Huelva","Cadiz"};
-
-        spinner_formacion.setAdapter(new ArrayAdapter<String>
-                (this,R.layout.support_simple_spinner_dropdown_item,valores_formacion));
-
-        spinner_provincia.setAdapter(new ArrayAdapter<String>
-                (this,R.layout.support_simple_spinner_dropdown_item,valores_provincia));
-
-        btn_alta.setOnClickListener(this);
-        btn_cancelar.setOnClickListener(this);
-        btn_listaContactos.setOnClickListener(this);
-        num_contactos.setText("Contactos agregados: "+contactos.size());
-
-
-        if(savedInstanceState!=null){
-            contacto= (Contact) savedInstanceState.getSerializable(CONTACTO);
-            contactos= (ArrayList<Contact>) savedInstanceState.getSerializable(CONTACTOS);
+        //carga el fragmento que había al girar la pantalla(si es que lo hay)
+        if(savedInstanceState!=null) {
+           fragment= getSupportFragmentManager().getFragment(savedInstanceState, "MAIN_FRAGMENT");
 
 
         }
 
+
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_main,fragment).commit();
+
+
+
+
+
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+    }
 
-    public void onClick(View view) {
-        switch (view.getId()){
-
-            case R.id.btn_alta:
-               Log.i("info","Has pulsado alta");
-
-                if(ET_nombre.getText().toString().trim().equalsIgnoreCase("") || ET_apellidos.getText().toString().trim().equalsIgnoreCase("")
-                        || ET_email.getText().toString().trim().equalsIgnoreCase("") || ET_telefono.getText().toString().trim().equalsIgnoreCase("")){
-
-                }else{
-                    if(ET_telefono.getText().toString().matches("(\\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}")) {
-
-
-                            String nombre = ET_nombre.getText().toString();
-                            String apellido = ET_apellidos.getText().toString();
-                            String email = ET_email.getText().toString();
-                            String telefono = ET_telefono.getText().toString();
-                            String formacion = spinner_formacion.getSelectedItem().toString();
-                            String provincia = spinner_provincia.getSelectedItem().toString();
-                            edad= seekbar_edad.getProgress();
-                            //sexo="Hombre";
-
-                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                                    public void onCheckedChanged(RadioGroup rg, int checkedId) {
-                                         for (int i = 0; i < rg.getChildCount(); i++) {
-                                               RadioButton btn = (RadioButton) rg.getChildAt(i);
-                                               if (btn.getId() == checkedId) {
-                                                 sexo = (String) btn.getText();
-
-                                                                      }
-                                                                  }
-                                                              }
-                                                          });
-                            if(sexo==null){
-                                Toast.makeText(this,"Debe introducir el Sexo ",Toast.LENGTH_SHORT).show();
-                            }else {
-                                contacto = new Contact(nombre, apellido, email, telefono, formacion, provincia, edad, sexo);
-                                Log.i("info", String.valueOf(contacto));
-                                contactos.add(contacto);
-                                Log.i("info", "Lista de contactos: \n" + contactos);
-
-                                num_contactos.setText("Contactos agregados: " + contactos.size());
-                            }
-                        /*
-                        for (Contact c: contactos) {
-                             if(c.getNombre().equals(contacto.getNombre()) && c.getApellido().equals(contacto.getApellido())){
-                                Toast.makeText(this,"Ese contacto ya esta en la lista",Toast.LENGTH_SHORT).show();
-                                break;
-                            }
-                        }*/
-
-
-                    }else{
-
-                        Toast.makeText(this,"Telefono no valido",Toast.LENGTH_SHORT).show();
-
-                    }
-                }
-                break;
-            case R.id.btn_cancelar:
-                Log.i("info","Has pulsado cancelar");
-
-                ET_nombre.setText("");
-                ET_apellidos.setText("");
-                ET_email.setText("");
-                ET_telefono.setText("");
-                seekbar_edad.setProgress(0);
-
-                break;
-
-            case R.id.btn_listaContacts:
-                Intent intent =new Intent(view.getContext(),ContactsList.class);
-                startActivityForResult(intent,0);
-                break;
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
         }
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        //detecta el item de nuestro NavigationBar clickeado y nos permite navegar por los fragmentos
+        int id = item.getItemId();
+        boolean itemSeleccionado= false;
+
+
+        if (id == R.id.nav_lista_contactos) {
+            fragment= new ContactsList();
+            itemSeleccionado=true;
+
+        } else if (id == R.id.nav_nueva_empresa) {
+
+            fragment= new Companies_form();
+            itemSeleccionado=true;
+        } else if (id == R.id.nav_lista_empresas) {
+
+            fragment= new CompanyList();
+            itemSeleccionado=true;
+        }else if (id == R.id.nav_nuevo_contacto) {
+
+            fragment= new Contacts_form();
+            itemSeleccionado=true;
+        }
+
+        if(itemSeleccionado==true){
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_main,fragment).commit();
+
+        }
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-
-        outState.putSerializable(CONTACTO, contacto);
-        outState.putSerializable(CONTACTOS,contactos);
-    }
-
-    @Override
-    public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
-        edad=progress;
-        edad_elegida.setText(""+progress+" /"+seekbar_edad.getMax());
-    }
-
-    @Override
-    public void onStartTrackingTouch(SeekBar seekBar) {
+        getSupportFragmentManager().putFragment(outState,MAIN_FRAGMENT,fragment);
 
     }
-
-    @Override
-    public void onStopTrackingTouch(SeekBar seekBar) {
-        edad_elegida.setText(""+ edad+" /"+ seekbar_edad.getMax());
-    }
-
-
 }

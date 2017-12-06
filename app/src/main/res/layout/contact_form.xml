@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/form_contact">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorBackground"
+        tools:context="com.example.fermach.socialtech.Contacts_form"
+        android:weightSum="1"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140sp"
+            android:layout_weight="0.40">
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="match_parent"
+                android:id="@+id/fab_contacto"
+                android:visibility="visible"
+                android:layout_height="match_parent"
+                app:fabSize="normal"
+                android:src="@drawable/account"
+                android:clickable="true"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="20sp"
+                />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/area_nombre_apellidos"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/img_contact"
+                android:src="@drawable/ic_contact"
+                android:layout_marginLeft="10sp"
+                />
+            <LinearLayout
+                android:layout_width="194dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/area_nombre"
+                android:weightSum="1">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:counterMaxLength="30"
+                    app:counterEnabled="true"
+                    app:errorEnabled="true"
+                    android:layout_marginLeft="17sp"
+                    android:layout_marginRight="17sp"
+                    >
+
+                    <EditText
+                        android:id="@+id/editText_nombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/nombre_contacto"
+                        android:inputType="text"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/area_apellidos"
+                android:weightSum="1"
+                >
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:counterMaxLength="30"
+                    app:counterEnabled="true"
+                    app:errorEnabled="true"
+                    android:layout_marginLeft="13sp"
+                    android:layout_marginRight="17sp"
+                    android:layout_weight="9.38">
+
+                    <EditText
+                        android:id="@+id/editText_apellido"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/apellidos_contacto"
+                        android:inputType="text"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/area_edad"
+            android:weightSum="1"
+            android:layout_marginTop="18sp"
+            android:layout_marginLeft="17sp"
+            android:layout_marginRight="17dp"
+
+            >
+            <TextView
+                android:id="@+id/textView_edad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edad_contacto"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"/>
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="32dp" />
+            <TextView
+                android:id="@+id/textView_edad_elegida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBackground"
+                android:text=" "
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/area_sexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6sp"
+            android:layout_marginLeft="17sp"
+            android:layout_marginRight="17dp"
+            android:orientation="vertical"
+            android:layout_marginTop="13sp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textView_sexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sexo_contacto"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginBottom="11sp"
+                />
+
+            <RadioGroup
+                android:id="@+id/Rgroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                >
+
+                <RadioButton
+                    android:id="@+id/radio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sexo_masculino"
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/radio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sexo_femenino" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="12sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/area_telefono"
+            android:weightSum="1"
+            android:layout_marginTop="12sp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/img_phone"
+                android:src="@drawable/ic_phone"
+                android:layout_marginLeft="10sp"
+                />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:counterEnabled="false"
+                app:errorEnabled="true"
+                android:layout_marginLeft="17sp"
+                android:layout_marginRight="17sp">
+
+                <EditText
+                    android:id="@+id/editText_numero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/numero_contacto"
+                    android:inputType="number"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/area_correo"
+            android:weightSum="1"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/img_correo"
+                android:src="@drawable/ic_email"
+                android:layout_marginLeft="10sp"
+                />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17sp"
+                android:layout_marginRight="17sp"
+                app:counterEnabled="false"
+                app:errorEnabled="true">
+
+                <EditText
+                    android:id="@+id/editText_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email_contacto"
+                    android:inputType="text"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/area_formacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="11sp">
+
+            <ImageView
+                android:id="@+id/img_formacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="11sp"
+                android:layout_marginTop="11sp"
+                android:layout_marginLeft="10sp"
+                android:src="@drawable/ic_formation" />
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/multiAutoComplete_formacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="17sp"
+                android:layout_marginRight="17dp"
+                android:hint="@string/formacion_contacto"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/area_provincia"
+            android:weightSum="1"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/img_provincia"
+                android:src="@drawable/ic_earth"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="13sp"
+                android:layout_marginBottom="11sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/poblacion_contacto"
+                    android:layout_marginLeft="17sp"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10sp"
+                    />
+
+                <Spinner
+                    android:id="@+id/spinner_provincia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="11sp"
+                    android:layout_marginLeft="17sp"
+                    android:layout_marginRight="17dp"
+                    android:textSize="20sp"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/mi_RLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorBackground"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="18sp"
+            android:weightSum="1">
+
+            <Button
+                style="@style/Widget.Design.BottomSheet.Modal"
+                android:id="@+id/btn_alta"
+                android:layout_width="143sp"
+                android:layout_height="36dp"
+                android:background="@color/colorBlue3"
+                android:text="@string/añadir"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginLeft="10sp"/>
+
+            <Button
+                style="@style/Widget.Design.BottomSheet.Modal"
+                android:id="@+id/btn_listaContacts"
+                android:layout_width="177dp"
+                android:layout_height="34dp"
+                android:background="@color/colorBlue3"
+                android:text="@string/lista_contactos"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="18sp"
+                android:layout_weight="0.33" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView_num_contactos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10sp"
+            android:background="@color/colorBackground"
+            android:text="@string/numero_contactos"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp"
+            android:layout_marginLeft="10sp"
+            />
+
+
+    </LinearLayout>
+</ScrollView>

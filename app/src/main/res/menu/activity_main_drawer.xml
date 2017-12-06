@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_nuevo_contacto"
+            android:icon="@drawable/ic_contact"
+            android:title="Agregar contacto" />
+        <item
+            android:id="@+id/nav_nueva_empresa"
+            android:icon="@drawable/empresa"
+            android:title="Agregar empresa" />
+        <item
+            android:id="@+id/nav_lista_contactos"
+            android:icon="@drawable/lista"
+            android:title="Lista de contactos" />
+        <item
+            android:id="@+id/nav_lista_empresas"
+            android:icon="@drawable/lista"
+            android:title="Lista de empresas" />
+    </group>
+
+
+
+</menu>

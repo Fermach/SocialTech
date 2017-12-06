@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    >
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140sp"
+        android:layout_weight="2"
+
+        >
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_detalle_contacto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:fabSize="normal"
+            app:backgroundTint="@color/colorAccent"
+            android:clickable="true"
+            android:src="@drawable/account"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp"
+            />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="15"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="12sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.00"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14sp"
+                android:layout_marginTop="10sp"
+                android:layout_weight="0.12"
+                android:text="@string/nombre"
+                android:textColor="@color/colorBlack"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/personaNombre_lista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8sp"
+                android:layout_marginTop="10sp"
+                android:layout_weight="10.29"
+                android:text=""
+                android:textColor="@color/colorBlack"
+                android:textSize="19sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="12sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.00"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14sp"
+                android:layout_marginTop="10sp"
+                android:text="@string/apellido"
+                android:textColor="@color/colorBlack"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:layout_weight="0.11" />
+
+            <TextView
+                android:id="@+id/personaApellidos_lista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8sp"
+                android:layout_marginTop="10sp"
+                android:layout_weight="7.29"
+                android:text=""
+                android:textColor="@color/colorBlack"
+                android:textSize="19sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="12sp"
+            />
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+          <TextView
+              android:id="@+id/textView2"
+              android:layout_width="88dp"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="14sp"
+              android:layout_marginTop="10sp"
+              android:text="@string/edad"
+              android:textColor="@color/colorBlack"
+              android:textSize="19sp"
+              android:textStyle="bold"
+              android:layout_weight="0.07" />
+
+          <TextView
+               android:id="@+id/personaEdad_lista"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="8sp"
+               android:text=""
+               android:textColor="@color/colorBlack"
+               android:textSize="19sp"
+               android:layout_marginTop="10sp"
+               android:layout_weight="10.73" />
+      </LinearLayout>
+
+       <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="12sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="0.00"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14sp"
+                android:layout_marginTop="8sp"
+                android:text="@string/sexo"
+                android:textColor="@color/colorBlack"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:layout_weight="0.06" />
+
+            <TextView
+                android:id="@+id/personaSexo_lista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8sp"
+                android:layout_marginTop="8sp"
+                android:layout_weight="11.45"
+                android:text=""
+                android:textColor="@color/colorBlack"
+                android:textSize="19sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="12sp"
+            />
+        <LinearLayout
+            android:layout_width="415dp"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_weight="0.06">
+
+            <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="7sp"
+               android:layout_marginLeft="14sp"
+               android:textStyle="bold"
+               android:text="@string/formacion"
+               android:textColor="@color/colorBlack"
+               android:textSize="19sp"
+                android:layout_weight="0.64" />
+            <TextView
+               android:id="@+id/personaFormacion_lista"
+               android:layout_width="279dp"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="8sp"
+               android:layout_marginTop="7sp"
+                android:text=""
+               android:textColor="@color/colorBlack"
+               android:textSize="19sp"
+                android:layout_weight="0.87" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="12sp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_weight="0.05">
+
+            <TextView
+               android:layout_width="106dp"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="14sp"
+               android:textStyle="bold"
+               android:layout_marginTop="10sp"
+               android:text="@string/poblacion"
+               android:textColor="@color/colorBlack"
+               android:textSize="19sp" />
+
+            <TextView
+               android:id="@+id/personaPoblacion_lista"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="8sp"
+               android:layout_marginTop="10sp"
+               android:layout_weight="12.39"
+               android:text=""
+               android:textColor="@color/colorBlack"
+               android:textSize="19sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="12sp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_weight="0.13">
+
+           <TextView
+              android:layout_width="107dp"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="7sp"
+              android:text="@string/email"
+              android:textStyle="bold"
+              android:layout_marginLeft="14sp"
+              android:textColor="@color/colorBlack"
+              android:textSize="19sp" />
+           <TextView
+              android:id="@+id/personaEmail_lista"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="8sp"
+              android:layout_marginTop="7sp"
+              android:layout_weight="9.01"
+              android:text=""
+              android:textColor="@color/colorBlack"
+              android:textSize="19sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="12sp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_weight="0.12">
+
+           <TextView
+               android:layout_width="105dp"
+               android:layout_marginTop="7sp"
+               android:layout_height="wrap_content"
+               android:text="@string/telefono"
+               android:textStyle="bold"
+               android:layout_marginLeft="14sp"
+               android:textColor="@color/colorBlack"
+               android:textSize="19sp"
+               android:layout_weight="0.02" />
+
+           <TextView
+               android:id="@+id/personaTelefono_lista"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="8sp"
+               android:layout_marginTop="7sp"
+               android:layout_weight="12.39"
+               android:text=""
+               android:textColor="@color/colorBlack"
+               android:textSize="19sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="12sp"
+            />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

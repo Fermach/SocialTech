@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/form_company">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context="com.example.fermach.socialtech.Companies_form"
+    android:weightSum="1"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140sp"
+        android:layout_weight="0.40">
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="match_parent"
+            android:id="@+id/fab_empresa"
+            android:visibility="visible"
+            android:layout_height="match_parent"
+            app:fabSize="normal"
+            android:src="@drawable/empresa"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp"
+            />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+     <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/img_contact"
+        android:src="@drawable/ic_contact"
+        android:layout_marginLeft="17sp" />
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/area_nombre_empresa"
+        android:weightSum="1">
+
+       <android.support.design.widget.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:counterMaxLength="30"
+          app:counterEnabled="true"
+          app:errorEnabled="true"
+          android:layout_marginLeft="17sp"
+          android:layout_marginRight="17sp"
+         >
+
+           <EditText
+               android:id="@+id/editText_nombre_empresa"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="@string/nombre_contacto"
+               android:inputType="text"
+               android:textSize="15sp" />
+
+       </android.support.design.widget.TextInputLayout>
+
+     </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/area_locaidad_provincia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="43dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_marginLeft="7sp"
+                android:layout_marginTop="10sp"
+                android:id="@+id/img_provincia"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_earth"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+         </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="294dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="276dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21sp"
+                    android:layout_marginTop="10sp"
+                    android:text="@string/poblacion_contacto"
+                    android:textSize="15sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_provincia_empresa"
+                    android:layout_width="282dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="11sp"
+                    android:layout_marginLeft="17sp"
+                    android:layout_marginRight="17dp"
+                    android:textSize="20sp"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:counterEnabled="false"
+                    app:errorEnabled="true"
+                    android:layout_marginLeft="17sp"
+                    android:layout_marginRight="17sp">
+
+                    <EditText
+                        android:id="@+id/editText_localidad_empresa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/localidad_contacto"
+                        android:inputType="text"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:counterEnabled="false"
+                    app:errorEnabled="true"
+                    android:layout_marginLeft="17sp"
+                    android:layout_marginRight="17sp">
+
+                    <EditText
+                        android:id="@+id/editText_direccion_empresa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/direccion_empresa"
+                        android:inputType="text"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="12sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/area_telefono_empresa"
+        android:weightSum="1"
+        android:layout_marginTop="12sp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/img_phone"
+            android:src="@drawable/ic_phone"
+            android:layout_marginLeft="10sp"
+            />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="false"
+            app:errorEnabled="true"
+            android:layout_marginLeft="17sp"
+            android:layout_marginRight="17sp">
+
+            <EditText
+                android:id="@+id/editText_telefono_empresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/numero_contacto"
+                android:inputType="number"
+                android:textSize="15sp" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/area_correo_empresa"
+        android:weightSum="1"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/img_correo"
+            android:src="@drawable/ic_email"
+            android:layout_marginLeft="10sp"
+            />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17sp"
+            android:layout_marginRight="17sp"
+            app:counterEnabled="false"
+            app:errorEnabled="true">
+
+            <EditText
+                android:id="@+id/editText_email_empresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_contacto"
+                android:inputType="text"
+                android:textSize="15sp" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/area_observaciones_empresa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.39"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/img_obsevaciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10sp"
+            android:src="@drawable/observaciones" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="304dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="17sp"
+            android:layout_marginRight="17sp"
+            app:counterEnabled="false"
+            app:errorEnabled="true">
+
+            <EditText
+                android:id="@+id/editText_observaciones_empresa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/observaciones_empresa"
+                android:inputType="text"
+                android:textSize="15sp" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/area_contacto_empresa"
+        android:weightSum="1"
+        android:layout_weight="0.39">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/img_contacto_empresa"
+            android:src="@drawable/ic_cliente"
+            android:layout_marginLeft="10sp"
+            />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="17sp"
+            android:layout_marginRight="17sp"
+            app:counterEnabled="false"
+            app:errorEnabled="true">
+
+            <EditText
+                android:id="@+id/editText_contacto_empresa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/contacto_empresa"
+                android:inputType="text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="287dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginLeft="10sp"
+                android:text="@string/texto_restriccion1_contacto_empresa" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="4sp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginLeft="10sp"
+                android:text="@string/texto_restriccion2_contacto_empresa" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mi_RLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorBackground"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="18sp"
+        android:weightSum="1">
+
+        <Button
+            style="@style/Widget.Design.BottomSheet.Modal"
+            android:id="@+id/btn_alta_empresa"
+            android:layout_width="143sp"
+            android:layout_height="36dp"
+            android:background="@color/colorBlue3"
+            android:text="@string/añadir"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginLeft="18sp"/>
+
+        <Button
+            android:id="@+id/btn_listaEmpresas"
+            style="@style/Widget.Design.BottomSheet.Modal"
+            android:layout_width="177dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="18sp"
+            android:layout_weight="0.33"
+            android:background="@color/colorBlue3"
+            android:text="@string/lista_empresas"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_num_empresas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10sp"
+        android:background="@color/colorBackground"
+        android:text="@string/numero_empresas"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        android:layout_marginLeft="10sp"
+        />
+
+
+</LinearLayout>
+</ScrollView>

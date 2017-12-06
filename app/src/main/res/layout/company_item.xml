@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBlue3"
-    android:id="@+id/item_lista"
+    android:id="@+id/item_lista_empresa"
     >
 
     <RelativeLayout
@@ -15,11 +15,10 @@
         android:layout_height="103dp">
 
         <ImageView
-            android:id="@+id/imagen_en_lista"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/colorBackground2"
-            android:src="@drawable/account"
+            android:src="@drawable/empresa"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
 
@@ -32,7 +31,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/personaNombre"
+            android:id="@+id/empresaNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4sp"
@@ -41,16 +40,16 @@
             android:text="@string/nombre"/>
 
         <TextView
-            android:id="@+id/personaApellidos"
+            android:id="@+id/empresaProvincia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4sp"
-            android:text="@string/apellido"
+            android:text="@string/provincia"
             android:textColor="@color/colorWhite" />
 
 
         <TextView
-            android:id="@+id/personaEmail"
+            android:id="@+id/empresaEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4sp"
@@ -58,7 +57,7 @@
             android:textColor="@color/colorWhite" />
 
         <TextView
-            android:id="@+id/personaTelefono"
+            android:id="@+id/empresaTelefono"
             android:layout_width="match_parent"
             android:text="@string/telefono"
             android:layout_height="wrap_content"

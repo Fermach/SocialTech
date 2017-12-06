@@ -1,12 +1,15 @@
 package com.example.fermach.socialtech;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import com.google.firebase.database.Exclude;
+
 import java.io.Serializable;
 
-/**
- * Created by matinal on 03/10/2017.
- */
 
 public class Contact implements Serializable {
+    private String id;
     private String nombre;
     private String apellido;
     private String telefono;
@@ -15,8 +18,25 @@ public class Contact implements Serializable {
     private String provincia;
     private int edad;
     private String sexo;
+    private int imagen;
 
-    public Contact(String nombre, String apellido, String telefono, String email, String formacion, String provincia, int edad,String sexo) {
+    public Contact() {
+    }
+
+    public Contact(String id, int imagen, String nombre, String apellido, String telefono, String email, String formacion, String provincia, int edad, String sexo) {
+        this.id=id;
+        this.imagen=imagen;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.email = email;
+        this.formacion = formacion;
+        this.provincia = provincia;
+        this.edad = edad;
+        this.sexo= sexo;
+    }
+    public Contact(int imagen, String nombre, String apellido, String telefono, String email, String formacion, String provincia, int edad, String sexo) {
+        this.imagen=imagen;
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
@@ -28,15 +48,14 @@ public class Contact implements Serializable {
     }
 
 
-
-
     @Override
     public String toString() {
         return "Contacto{" +
-                "nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", telefono=" + telefono +
-                ", email=" + email +
+                "  id= "+ id +
+                ", nombre= " + nombre  +
+                ", apellido= " + apellido +
+                ", telefono= " + telefono +
+                ", email= " + email +
                 ", formacion= " + formacion +
                 ", provincia= " + provincia +
                 ", edad= " + edad +
@@ -65,6 +84,16 @@ public class Contact implements Serializable {
         this.nombre = nombre;
     }
 
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+
     public String getApellido() {
         return apellido;
     }
@@ -85,6 +114,7 @@ public class Contact implements Serializable {
         return email;
     }
 
+    @Exclude
     public void setEmail(char sexo) {
         this.email = email;
     }
@@ -111,5 +141,13 @@ public class Contact implements Serializable {
 
     public void setSexo(String sexo) {
         this.sexo = sexo;
+    }
+
+    public int getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(int imagen) {
+        this.imagen = imagen;
     }
 }
